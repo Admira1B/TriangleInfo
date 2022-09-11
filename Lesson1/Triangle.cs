@@ -21,14 +21,22 @@ namespace Lesson1
 
         private void InputSides()
         {
-            Console.Write("Сторона а = ");
-            a = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.Write("Сторона а = ");
+                a = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Сторона b = ");
-            b = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Сторона b = ");
+                b = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Сторона c = ");
-            c = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Сторона c = ");
+                c = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Данные были введены в неправильном формате!\n");
+                throw;
+            }
 
             if (a <= 0 || b <= 0 || c <= 0)
             {
