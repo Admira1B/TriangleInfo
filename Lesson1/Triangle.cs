@@ -65,7 +65,7 @@ namespace Lesson1
         {
             if (a == b || a == c || b == c)
             {
-                if (a == b && a == c)
+                if (a == b && a == b && b == c)
                 {
                     return "равносторонний";
                 }
